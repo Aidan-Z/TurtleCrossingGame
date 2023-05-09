@@ -5,22 +5,14 @@ from score import Score
 import time
 import threading
 
-#objects
+
 screen = Screen()
 screen.setup(width=600, height=600)
 screen.tracer(0)
 
 player = Player()
-
 s = Score()
-
-
-
 cars = []
-
-
-
-
 
 screen.listen()
 screen.onkey(player.up, "Up")
@@ -46,6 +38,7 @@ def main():
     while game_on:
         time.sleep(0.1)
         screen.update()
+        #need to generate cars but not too many of them and not too fast
 
 
 
