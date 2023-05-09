@@ -5,7 +5,6 @@ Y_RANGE = range(-240, 260)
 X_RANGE = range(-295, 260)
 
 
-
 class Car(Turtle):
 
     def __init__(self):
