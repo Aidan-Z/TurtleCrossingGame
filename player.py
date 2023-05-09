@@ -13,6 +13,3 @@ class Player(Turtle):
 
     def up(self):
         self.forward(10)
-
-    def down(self):
-        self.back(5)

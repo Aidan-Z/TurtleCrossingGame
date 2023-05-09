@@ -11,7 +11,6 @@ player = Player()
 
 screen.listen()
 screen.onkey(player.up, "Up")
-screen.onkey(player.down, "Down")
 
 
 
@@ -25,8 +24,12 @@ def main():
         time.sleep(0.1)
         screen.update()
 
-        for i in cars:
+        for i in cars[:]:
             i.move()
+            if player.distance(i) < 40:
+                game_on = False
+
+
 
 
 

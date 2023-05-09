@@ -1,6 +1,6 @@
 from turtle import Turtle
 import random
-COLORS = ['orange', 'green', 'blue', 'red', 'pink']
+COLORS = ['orange', 'green', 'blue', 'red', 'pink', 'yellow', ]
 Y_RANGE = range(-295, 260)
 
 
