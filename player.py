@@ -9,8 +9,6 @@ class Player(Turtle):
         self.goto(0, -280)
         self.setheading(90)
 
-
-
     def up(self):
         self.forward(10)
 

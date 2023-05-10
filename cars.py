@@ -3,6 +3,8 @@ import random
 COLORS = ['orange', 'green', 'blue', 'red', 'pink', 'yellow', ]
 Y_RANGE = range(-240, 260)
 X_RANGE = range(-295, 260)
+START_MOVE = 5
+MOVE_INC = 1
 
 
 
@@ -12,11 +14,12 @@ class Car(Turtle):
         super().__init__()
         self.cars = [] #can use list from main because is class attribute
         self.hideturtle()
+        self.car_speed = START_MOVE
 
 
     def move(self):
         for i in self.cars:
-            i.backward(5)
+            i.backward(self.car_speed)
 
     def gen_car(self):
         random_chance = random.randint(1, 6)
@@ -28,6 +31,8 @@ class Car(Turtle):
             new_car.goto(270, random.choice(Y_RANGE))
             self.cars.append(new_car)
 
+    def speed_up(self):
+        self.car_speed += MOVE_INC
 
 
 
